@@ -33,6 +33,15 @@ class Dynamic_Header_Footer {
 		// Add a filter to the save post to inject out template into the page cache
 		add_filter( 'wp_insert_post_data', array( $this, 'fpt_register_project_templates' ) );
 		add_filter( 'template_include', array( $this, 'fpt_view_project_template' ) );
+
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
+	}
+
+	public function enqueue() {
+		if ( is_page_template( 'template-page-builder.php' ) ) {
+			wp_register_style( 'fullwidth-template', plugins_url( 'assets/css/fullwidth-template.css', __FILE__ ) );
+			wp_enqueue_style( 'fullwidth-template' );
+		}
 	}
 
 	private function includes() {
