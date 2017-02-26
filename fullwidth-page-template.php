@@ -7,14 +7,14 @@
  * Author URI:      https://www.brainnstormforce.com
  * Text Domain:     fullwidth-page-template
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         1.0.0
  *
  * @package         Fullwidth_Page_Templates
  */
 
 require_once 'class-fullwidth-page-templates.php';
 
-define( 'FPT_VER', '0.1.0' );
+define( 'FPT_VER', '1.0.0' );
 define( 'FPT_DIR', plugin_dir_path( __FILE__ ) );
 define( 'FPT_URL', plugins_url( '/', __FILE__ ) );
 define( 'FPT_PATH', plugin_basename( __FILE__ ) );
