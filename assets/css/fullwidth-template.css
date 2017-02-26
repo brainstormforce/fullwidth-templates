@@ -1,6 +1,7 @@
 .page-template-template-page-builder-php #content, 
 .page-template-template-page-builder-php .content, 
-.page-template-template-page-builder-php .site-inner {
+.page-template-template-page-builder-php .site-inner,
+.fpt-template-generatepress.page-template-template-page-builder-php #page {
 	max-width: 100% !important;
 	width: 100% !important;
 	padding: 0 !important;

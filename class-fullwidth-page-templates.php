@@ -35,6 +35,14 @@ class Dynamic_Header_Footer {
 		add_filter( 'template_include', array( $this, 'fpt_view_project_template' ) );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
+		add_filter( 'body_class', array( $this, 'body_class' ) );
+	}
+
+	public function body_class( $body_Class ) {
+		$template = get_template();
+		$body_Class[] = 'fpt-template-' . $template;
+
+		return $body_Class;
 	}
 
 	public function enqueue() {
