@@ -1,5 +1,5 @@
 <?php 
-/* Template Name: Fullwidth Page Template */ 
+/* Template Name: BSF Fullwidth */ 
 
 get_header();
 
