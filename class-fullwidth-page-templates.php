@@ -12,6 +12,7 @@ class Dynamic_Header_Footer {
 		$this->includes();
 
 		$this->templates = array(
+			'template-page-builder-no-sidebar.php' => 'No Sidebar Page Template',
 			'template-page-builder.php' => 'Fullwidth Page Template',
 			'template-page-builder-no-header-footer.php' => 'Fullwidth No Header Footer Page Template'
 		);
