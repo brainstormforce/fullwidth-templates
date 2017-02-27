@@ -1,5 +1,5 @@
 <?php 
-/* Template Name: Fullwidth Page Template */ 
+/* Template Name: BSF No Sidebar */ 
 
 get_header();
 

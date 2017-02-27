@@ -1,5 +1,5 @@
 <?php 
-/* Template Name: Fullwidth No Header Footer Page Template */ 
+/* Template Name: BSF Fullwidth No Header Footer */ 
 
 no_content_get_header();
 
