@@ -26,9 +26,7 @@ class Dynamic_Header_Footer {
 				);
 		} else {
 			// Add a filter to the wp 4.7 version attributes metabox
-			add_filter(
-				'theme_page_templates', array( $this, 'add_new_template' )
-				);
+			$this->post_type_template();
 		}
 
 		// Add a filter to the save post to inject out template into the page cache
@@ -55,6 +53,23 @@ class Dynamic_Header_Footer {
 
 	private function includes() {
 		require_once FPT_DIR . '/templates/default/template-helpers.php';
+	}
+
+	private function post_type_template() {
+		$args = array(
+		   'public'   => true,
+		   '_builtin' => true
+		);
+
+		$post_types = get_post_types( $args, 'names', 'and' );
+
+		if ( ! empty( $post_types ) ) {
+
+			foreach ( $post_types as $post_type ) {
+				add_filter( 'theme_' . $post_type . '_templates', array( $this, 'add_new_template' ) );
+			}
+
+		}
 	}
 
 	/**
