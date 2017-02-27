@@ -29,6 +29,9 @@ function no_content_get_footer() {
 
 function page_builder_page_elements() {
 	the_content();
+
+	$comments_args = array();
+	comment_form( $comments_args );
 }
 
 add_action( 'page_builder_page_elements', 'page_builder_page_elements' );
