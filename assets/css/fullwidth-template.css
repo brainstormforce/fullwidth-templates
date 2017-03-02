@@ -7,3 +7,18 @@
 	padding: 0 !important;
 	margin: 0 !important;
 }
+
+body.fpt-template-twentysixteen.page-template-template-page-builder-no-sidebar-php #page,
+body.fpt-template-twentysixteen.page-template-template-page-builder-no-header-footer-php #page,
+body.fpt-template-twentysixteen.page-template-template-page-builder-php #page {
+	margin: 0;
+}
+
+body.page-template-template-page-builder-no-sidebar-php:not(.custom-background-image):before,
+body.page-template-template-page-builder-no-header-footer-php:not(.custom-background-image):before,
+body.page-template-template-page-builder-php:not(.custom-background-image):before,
+body.page-template-template-page-builder-no-sidebar-php:not(.custom-background-image):after,
+body.page-template-template-page-builder-no-header-footer-php:not(.custom-background-image):after,
+body.page-template-template-page-builder-php:not(.custom-background-image):after {
+	height: 0;
+}
