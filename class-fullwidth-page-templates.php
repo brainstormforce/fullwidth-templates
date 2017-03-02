@@ -38,8 +38,12 @@ class Dynamic_Header_Footer {
 	}
 
 	public function body_class( $body_Class ) {
-		$template = get_template();
-		$body_Class[] = 'fpt-template-' . $template;
+
+		if ( array_key_exists( get_page_template_slug(), $this->templates ) ) {
+		 	$body_Class[] = 'fpt-template';
+		}
+
+		$body_Class[] 	= 'fpt-template-' . get_template();
 
 		return $body_Class;
 	}
