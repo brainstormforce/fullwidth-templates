@@ -12,7 +12,7 @@ function no_content_get_header() {
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'fw-template' ); ?>>
+<body <?php body_class(); ?>>
 <?php 
 do_action( 'page_builder_content_body_before' );
 
