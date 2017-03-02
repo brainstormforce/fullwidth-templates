@@ -53,6 +53,11 @@ class Dynamic_Header_Footer {
 			wp_register_style( 'fullwidth-template', plugins_url( 'assets/css/fullwidth-template.css', __FILE__ ) );
 			wp_enqueue_style( 'fullwidth-template' );
 		}
+
+		if ( is_page_template( 'template-page-builder-no-sidebar.php' ) ) {
+			wp_register_style( 'fullwidth-template-no-sidebar', plugins_url( 'assets/css/fullwidth-template-no-sidebar.css', __FILE__ ) );
+			wp_enqueue_style( 'fullwidth-template-no-sidebar' );
+		}
 	}
 
 	private function includes() {

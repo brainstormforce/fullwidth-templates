@@ -41,3 +41,25 @@ body.page-template-template-page-builder-php:not(.custom-background-image):after
 	padding: 0 !important;
 	margin: 0 !important;
 }
+
+.fpt-template.fpt-template-Sparkling .container.main-content-area {
+	max-width: 100% !important;
+	width: 100% !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.fpt-template.fpt-template-Sparkling .container.main-content-area .row {
+	margin: 0;
+}
+
+.fpt-template.fpt-template-Sparkling .container.main-content-area .main-content-inner {
+	float: none;
+	width: 100%;
+	padding: 0;
+}
+
+.page-template-template-page-builder-no-sidebar .side-pull-left .main-content-inner {
+	width: 100%;
+	float: none;
+}
