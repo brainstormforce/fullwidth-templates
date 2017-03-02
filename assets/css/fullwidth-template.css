@@ -3,7 +3,9 @@
 .page-template-template-page-builder-php .site-inner,
 .fpt-template-generatepress.page-template-template-page-builder-php #page,
 .fpt-template.fpt-template-evolve > #wrapper,
-.fpt-template.fpt-template-evolve .content > .row {
+.fpt-template.fpt-template-evolve .content > .row,
+.fpt-template #page,
+.fpt-template {
 	max-width: 100% !important;
 	width: 100% !important;
 	padding: 0 !important;
@@ -23,4 +25,19 @@ body.page-template-template-page-builder-no-sidebar-php:not(.custom-background-i
 body.page-template-template-page-builder-no-header-footer-php:not(.custom-background-image):after,
 body.page-template-template-page-builder-php:not(.custom-background-image):after {
 	height: 0;
+}
+
+.fpt-template.fpt-template-Spacious #main {
+	padding: 0;
+}
+
+.fpt-template.fpt-template-Spacious .header-post-title-container {
+	display: none;
+}
+
+.fpt-template.fpt-template-Spacious #main .inner-wrap{
+	max-width: 100% !important;
+	width: 100% !important;
+	padding: 0 !important;
+	margin: 0 !important;
 }
