@@ -1,7 +1,9 @@
 .page-template-template-page-builder-php #content, 
 .page-template-template-page-builder-php .content, 
 .page-template-template-page-builder-php .site-inner,
-.fpt-template-generatepress.page-template-template-page-builder-php #page {
+.fpt-template-generatepress.page-template-template-page-builder-php #page,
+.fpt-template.fpt-template-evolve > #wrapper,
+.fpt-template.fpt-template-evolve .content > .row {
 	max-width: 100% !important;
 	width: 100% !important;
 	padding: 0 !important;
