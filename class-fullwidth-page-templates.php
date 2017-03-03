@@ -12,9 +12,9 @@ class Dynamic_Header_Footer {
 		$this->includes();
 
 		$this->templates = array(
-			'template-page-builder-no-sidebar.php' => 'BSF No Sidebar',
-			'template-page-builder.php' => 'BSF Fullwidth',
-			'template-page-builder-no-header-footer.php' => 'BSF Fullwidth No Header Footer'
+			'template-page-builder-no-sidebar.php' => 'FW No Sidebar',
+			'template-page-builder.php' => 'FW Fullwidth',
+			'template-page-builder-no-header-footer.php' => 'FW Fullwidth No Header Footer'
 		);
 
 		// Add a filter to the attributes metabox to inject template into the cache.
