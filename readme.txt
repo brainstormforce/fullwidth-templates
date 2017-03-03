@@ -26,10 +26,6 @@ Support the development of the plugin
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-e.g.
-
 1. Install Fullwidth Templates either via the WordPress plugin directory or by uploading the files to your server at wp-content/plugins.
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. When creating or editing pages you will see options to select the fullwidth templates in the template selection dropdown, select any of the three templates and updaet the page.
