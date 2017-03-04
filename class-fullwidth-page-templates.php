@@ -39,7 +39,9 @@ class Dynamic_Header_Footer {
 
 	public function body_class( $body_Class ) {
 
-		if ( array_key_exists( get_page_template_slug(), $this->templates ) ) {
+		$template = get_page_template_slug();
+
+		if ( false !== $template && array_key_exists( $template, $this->templates ) ) {
 		 	$body_Class[] = 'fpt-template';
 		}
 
