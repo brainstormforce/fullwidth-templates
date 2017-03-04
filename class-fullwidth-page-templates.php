@@ -112,6 +112,11 @@ class Dynamic_Header_Footer {
 
 		global $post;
 
+		// If it is nont a single post/page/post-type, don't apply the template from the plugin.
+		if ( ! is_singular() ) {
+			return $template;
+		}
+
 		if ( ! isset( $this->templates[ get_post_meta( $post->ID, '_wp_page_template', true ) ] ) ) {
 
 			return $template;
