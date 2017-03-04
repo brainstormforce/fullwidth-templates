@@ -35,19 +35,39 @@ class Dynamic_Header_Footer {
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
 		add_filter( 'body_class', array( $this, 'body_class' ) );
+		add_filter( 'wp', array( $this, 'theme_support' ) );
 	}
 
 	public function body_class( $body_Class ) {
 
 		$template = get_page_template_slug();
 
-		if ( false !== $template && array_key_exists( $template, $this->templates ) ) {
+		if ( false !== $template && $this->is_template_active() ) {
 		 	$body_Class[] = 'fpt-template';
 		}
 
 		$body_Class[] 	= 'fpt-template-' . get_template();
 
 		return $body_Class;
+	}
+
+	public function theme_support() {
+
+		if ( $this->is_template_active() ) {
+			add_filter( 'primer_the_page_title', '__return_false' );
+		}
+
+	}
+
+	public function is_template_active() {
+
+		$template = get_page_template_slug();
+		
+		if ( false !== $template && array_key_exists( $template, $this->templates ) ) {
+			return true;
+		}
+
+		return false;
 	}
 
 	public function enqueue() {
