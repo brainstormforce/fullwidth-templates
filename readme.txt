@@ -32,13 +32,13 @@ This plugin adds Fullwidth Page Templates to overcome these limitations.
 
   
 **Made to work with Page Builders**  
-When you\'re using a Page Builder, things like the default page title, boxed layout, extra margin and padding usually get in your way. This plugin puts you in absolute control and removes all unnecessary elements from your layout.
+When you're using a Page Builder, things like the default page title, boxed layout, extra margin and padding usually get in your way. This plugin puts you in absolute control and removes all unnecessary elements from your layout.
 
 **Dead Simple**  
 It adds three simple options for your pages & posts. Just choose the one and you should be all set.
 
 **Potable & No Lock-in**  
-If you\'re anything like us, you care what happens when you switch your themes. Generally changing theme means, you will need to edit all your pages and change templates. But if you\'re using a plugin like this - you won\'t have to worry about it.
+If you're anything like us, you care what happens when you switch your themes. Generally changing theme means, you will need to edit all your pages and change templates. But if you're using a plugin like this - you won't have to worry about it.
 
 **Supported & Actively Developed**  
 Need help with something? Have an issue to report? [Get in touch][1] with us on GitHub.
@@ -51,20 +51,20 @@ Need help with something? Have an issue to report? [Get in touch][1] with us on 
 
 Disclaimer -
 
-*   This option works on most of the themes; but it might not work on few depending on it\'s layout structure.
+*   This option works on most of the themes; but it might not work on few depending on it's layout structure.
 *   Please open up an issue on [GitHub][1] or send us a pull request for adding compatibility with your theme.
 
 
 Project by [Brainstorm Force][3]. 
- [1]: https://www.brainstormforce.com/
- [2]: https://www.brainstormforce.com/
- [2]: https://www.brainstormforce.com/
+ [1]: https://github.com/brainstormforce/fullwidth-templates/
+ [2]: https://github.com/brainstormforce/fullwidth-templates/
+ [3]: https://www.brainstormforce.com/
 
 
 == Installation ==
 
 1.  Install Fullwidth Templates either via the WordPress plugin directory or by uploading the files to your server at wp-content/plugins.
-2.  Activate the plugin through the \'Plugins\' menu in WordPress
+2.  Activate the plugin through the 'Plugins' menu in WordPress
 3.  When creating or editing pages you will see options to select the fullwidth templates in the template selection dropdown, select any of the three templates and update the page.
 
 Check Screenshots for more details.
