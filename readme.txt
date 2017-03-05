@@ -76,3 +76,5 @@ Check Screenshots for more details.
 1. Extra Template Selection Options for Pages & Posts
 2. Default View on Primer Parent Theme
 3. No Sidebar Template
+4. Fullwidth Template
+5. Blank - No Header / Footer Template
