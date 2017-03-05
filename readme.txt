@@ -23,7 +23,7 @@ This plugin adds Fullwidth Page Templates to overcome these limitations.
 
 **Full Width Template **  
 *   Removes Sidebar, page title, comments and stretches the layout to full width
-*   Ideal if you\'re using a Page Builder
+*   Ideal if you're using a Page Builder
 
 **Bonus - No Sidebar Template **  
 *   Just Removes Sidebar
