@@ -82,3 +82,9 @@ Check Screenshots for more details.
 ### 3. No Sidebar Template ###
 ![No Sidebar Template](http://ps.w.org/fullwidth-templates-for-any-theme-&-page-builder/assets/screenshot-3.png)
 
+### 4. Fullwidth Template ###
+![Fullwidth Template](http://ps.w.org/fullwidth-templates-for-any-theme-&-page-builder/assets/screenshot-4.png)
+
+### 5. Blank - No Header / Footer Template ###
+![Blank - No Header / Footer Template](http://ps.w.org/fullwidth-templates-for-any-theme-&-page-builder/assets/screenshot-5.png)
+
