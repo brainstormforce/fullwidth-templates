@@ -17,15 +17,18 @@ Does your theme offer full width page templates? Need freedom to design beautifu
 
 This plugin adds Fullwidth Page Templates to overcome these limitations.
 
-**Blank Template **  
+**Blank Template**
+
 *   Removes header, footer, sidebar, comments, title and leaves you with a plain canvas
 *   Awesome for landing pages where you need complete control over your layout
 
-**Full Width Template **  
+**Full Width Template**  
+
 *   Removes Sidebar, page title, comments and stretches the layout to full width
 *   Ideal if you're using a Page Builder
 
-**Bonus - No Sidebar Template **  
+**Bonus - No Sidebar Template**  
+
 *   Just Removes Sidebar
 *   Perfect if your theme does not have No Sidebar option.
 *   Rest of the layout & styling will remain intact.
