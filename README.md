@@ -17,6 +17,10 @@ Does your theme offer full width page templates? Need freedom to design beautifu
 
 This plugin adds Fullwidth Page Templates to overcome these limitations.
 
+### Here is a quick video explaining how this plugin works ###
+
+[youtube https://www.youtube.com/watch?v=LsIrXPHC0xM]
+
 **Blank Template**
 
 *   Removes header, footer, sidebar, comments, title and leaves you with a plain canvas
