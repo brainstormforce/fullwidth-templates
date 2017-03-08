@@ -88,6 +88,7 @@ Check Screenshots for more details.
 
 = 1.0.1 =
 - New: Support for storefront theme.
+- New: Support Custom Post types created by plugin Custom Post Type UI.
 
 = 1.0.0 =
 - Initial Release
