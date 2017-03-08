@@ -59,8 +59,8 @@ Need help with something? Have an issue to report? [Get in touch][1] with us on 
 <blockquote>
 ### Disclaimer - ###
 
-*   This option works on most of the themes; but it might not work on few depending on it's layout structure.
-*   Please open up an issue on [GitHub][1] or send us a pull request for adding compatibility with your theme.
+This option works on most of the themes; but it might not work on few depending on it's layout structure.
+Please open up an issue on GitHub or send us a pull request for adding compatibility with your theme.
 <p></p>
 </blockquote>
 
