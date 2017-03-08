@@ -26,7 +26,7 @@ class Dynamic_Header_Footer {
 				);
 		} else {
 			// Add a filter to the wp 4.7 version attributes metabox
-			$this->post_type_template();
+			add_action( 'init', array( $this, 'post_type_template' ), 999 );
 		}
 
 		// Add a filter to the save post to inject out template into the page cache
@@ -86,13 +86,15 @@ class Dynamic_Header_Footer {
 		require_once FPT_DIR . '/templates/default/template-helpers.php';
 	}
 
-	private function post_type_template() {
+	public function post_type_template() {
 		$args = array(
-		   'public'   => true,
-		   '_builtin' => true
+		   'public'   => true
 		);
 
 		$post_types = get_post_types( $args, 'names', 'and' );
+
+		// Disable some of the known unwanted post types.
+		unset( $post_types['attachment'] );
 
 		if ( ! empty( $post_types ) ) {
 
