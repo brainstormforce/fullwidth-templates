@@ -4,7 +4,7 @@ Tags: full width, fullwidth, template, beaver builder, elementor, genesis, prime
 Donate link: https://www.brainstormforce.com/payment/
 Requires at least: 4.2 or later
 Tested up to: 4.7.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,7 +69,6 @@ Project by [Brainstorm Force][3].
  [2]: https://github.com/brainstormforce/fullwidth-templates/
  [3]: https://www.brainstormforce.com/
 
-
 == Installation ==
 
 1.  Install Fullwidth Templates either via the WordPress plugin directory or by uploading the files to your server at wp-content/plugins.
@@ -84,3 +83,11 @@ Check Screenshots for more details.
 3. No Sidebar Template
 4. Fullwidth Template
 5. Blank - No Header / Footer Template
+
+== Changelog ==
+
+= 1.0.1 =
+- New: Support for storefront theme.
+
+= 1.0.0 =
+- Initial Release
