@@ -5,7 +5,8 @@
 .fpt-template.fpt-template-evolve > #wrapper,
 .fpt-template.fpt-template-evolve .content > .row,
 .fpt-template #page,
-.fpt-template {
+.fpt-template,
+.fpt-template.fpt-template-storefront.page-template-template-page-builder #content .col-full {
 	max-width: 100% !important;
 	width: 100% !important;
 	padding: 0 !important;
@@ -62,4 +63,9 @@ body.page-template-template-page-builder-php:not(.custom-background-image):after
 .page-template-template-page-builder-no-sidebar .side-pull-left .main-content-inner {
 	width: 100%;
 	float: none;
+}
+
+/* Storefront Theme */
+.fpt-template.fpt-template-storefront.no-wc-breadcrumb .site-header {
+	margin-bottom: 0;
 }
