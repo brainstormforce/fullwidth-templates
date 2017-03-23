@@ -28,7 +28,13 @@ define( 'FPT_PATH', plugin_basename( __FILE__ ) );
  * Load the Plugin Class.
  */
 function init_fullwidth_template() {
+
+	// Load localization file
+	load_plugin_textdomain( 'fullwidth-page-template' );
+
+	// Init dynamic header footer
 	new Dynamic_Header_Footer();
+
 }
 
 add_action( 'plugins_loaded', 'init_fullwidth_template' );
