@@ -7,7 +7,7 @@
  * Author URI:      https://www.brainnstormforce.com
  * Text Domain:     fullwidth-page-template
  * Domain Path:     /languages
- * Version:         1.0.1
+ * Version:         1.0.2
  *
  * @package         Fullwidth_Page_Templates
  */

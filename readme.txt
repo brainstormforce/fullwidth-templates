@@ -1,10 +1,10 @@
 === Fullwidth Templates for Any Theme & Page Builder ===
-Contributors: brainstormforce, nikschavan, WPCrafter
+Contributors: brainstormforce, nikschavan, WPCrafter, ramiy
 Tags: full width, fullwidth, template, beaver builder, elementor, genesis, primer, full width template, remove sidebar, page builder
 Donate link: https://www.brainstormforce.com/payment/
-Requires at least: 4.2 or later
-Tested up to: 4.7.2
-Stable tag: 1.0.1
+Requires at least: 4.2
+Tested up to: 4.7
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -85,6 +85,12 @@ Check Screenshots for more details.
 5. Blank - No Header / Footer Template
 
 == Changelog ==
+
+= 1.0.2 =
+- Prevent direct access to php files.
+- Prevent direct access to directories.
+- i18n: Load plugin translations.
+- i18n: Use stanslation function for text strings.
 
 = 1.0.1 =
 - New: Support for storefront theme.
