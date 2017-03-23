@@ -12,6 +12,11 @@
  * @package         Fullwidth_Page_Templates
  */
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 require_once 'class-fullwidth-page-templates.php';
 
 define( 'FPT_VER', '1.0.1' );
