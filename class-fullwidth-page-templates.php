@@ -1,4 +1,10 @@
 <?php
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+
 
 /**
  *
@@ -12,9 +18,9 @@ class Dynamic_Header_Footer {
 		$this->includes();
 
 		$this->templates = array(
-			'template-page-builder-no-sidebar.php' => 'FW No Sidebar',
-			'template-page-builder.php' => 'FW Fullwidth',
-			'template-page-builder-no-header-footer.php' => 'FW Fullwidth No Header Footer'
+			'template-page-builder-no-sidebar.php' => esc_html__( 'FW No Sidebar', 'fullwidth-page-template' ),
+			'template-page-builder.php' => esc_html__( 'FW Fullwidth', 'fullwidth-page-template' ),
+			'template-page-builder-no-header-footer.php' => esc_html__( 'FW Fullwidth No Header Footer', 'fullwidth-page-template' ),
 		);
 
 		// Add a filter to the attributes metabox to inject template into the cache.
