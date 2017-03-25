@@ -33,7 +33,7 @@ function init_fullwidth_template() {
 	load_plugin_textdomain( 'fullwidth-page-template' );
 
 	// Init dynamic header footer
-	new Dynamic_Header_Footer();
+	new Fullwidth_Page_Templates();
 
 }
 

@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  *
  */
-class Dynamic_Header_Footer {
+class Fullwidth_Page_Templates {
 
 	private $templates;
 
