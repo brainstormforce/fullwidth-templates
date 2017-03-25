@@ -90,7 +90,7 @@ Check Screenshots for more details.
 - Prevent direct access to php files.
 - Prevent direct access to directories.
 - i18n: Load plugin translations.
-- i18n: Use stanslation function for text strings.
+- i18n: Use translation function for text strings.
 
 = 1.0.1 =
 - New: Support for storefront theme.
