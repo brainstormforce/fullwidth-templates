@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once 'class-fullwidth-page-templates.php';
 
-define( 'FPT_VER', '1.0.1' );
+define( 'FPT_VER', '1.0.2' );
 define( 'FPT_DIR', plugin_dir_path( __FILE__ ) );
 define( 'FPT_URL', plugins_url( '/', __FILE__ ) );
 define( 'FPT_PATH', plugin_basename( __FILE__ ) );
