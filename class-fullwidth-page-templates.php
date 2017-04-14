@@ -86,6 +86,11 @@ class Fullwidth_Page_Templates {
 			wp_register_style( 'fullwidth-template-no-sidebar', plugins_url( 'assets/css/fullwidth-template-no-sidebar.css', __FILE__ ) );
 			wp_enqueue_style( 'fullwidth-template-no-sidebar' );
 		}
+
+		if( is_page_template( 'template-page-builder-no-header-footer.php' ) ) {
+			wp_register_style( 'fullwidth-template-no-header-footer', plugins_url( 'assets/css/fullwidth-template-no-header-footer.css', __FILE__ ) );
+			wp_enqueue_style( 'fullwidth-template-no-header-footer' );
+		}
 	}
 
 	private function includes() {
