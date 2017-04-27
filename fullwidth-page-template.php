@@ -4,7 +4,7 @@
  * Plugin URI:      https://www.brainstormforce.com
  * Description:     Create Full width landing pages with any theme.
  * Author:          Brainstorm Force
- * Author URI:      https://www.brainnstormforce.com
+ * Author URI:      https://www.brainstormforce.com
  * Text Domain:     fullwidth-page-template
  * Domain Path:     /languages
  * Version:         1.0.2
