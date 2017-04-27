@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:     Fullwidth Page Templates
- * Plugin URI:      https://www.brainnstormforce.com
+ * Plugin URI:      https://www.brainstormforce.com
  * Description:     Create Full width landing pages with any theme.
  * Author:          Brainstorm Force
  * Author URI:      https://www.brainnstormforce.com
