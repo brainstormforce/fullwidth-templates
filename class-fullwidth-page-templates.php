@@ -16,6 +16,7 @@ class Fullwidth_Page_Templates {
 	function __construct() {
 
 		$this->includes();
+		$this->load_textdomain();
 
 		$this->templates = array(
 			'template-page-builder-no-sidebar.php' => esc_html__( 'FW No Sidebar', 'fullwidth-templates' ),
@@ -42,6 +43,13 @@ class Fullwidth_Page_Templates {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
 		add_filter( 'body_class', array( $this, 'body_class' ) );
 		add_filter( 'wp', array( $this, 'theme_support' ) );
+	}
+
+	/**
+	 * Loads textdomain for the plugin.
+	 */
+	public function load_textdomain() {
+		load_plugin_textdomain( 'fullwidth-templates' );
 	}
 
 	public function body_class( $body_Class ) {
