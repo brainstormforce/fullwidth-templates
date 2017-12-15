@@ -3,8 +3,8 @@
 **Tags:** full width, fullwidth, template, beaver builder, elementor, genesis, primer, full width template, remove sidebar, page builder  
 **Donate link:** https://www.brainstormforce.com/payment/  
 **Requires at least:** 4.2  
-**Tested up to:** 4.7  
-**Stable tag:** 1.0.2  
+**Tested up to:** 4.9.1  
+**Stable tag:** 1.0.3  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -95,6 +95,9 @@ Check Screenshots for more details.
 
 
 ## Changelog ##
+
+### 1.0.3 ###
+- Make the plugin translation compatible.
 
 ### 1.0.2 ###
 - Prevent direct access to php files.

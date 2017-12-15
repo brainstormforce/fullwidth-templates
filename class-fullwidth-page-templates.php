@@ -18,9 +18,9 @@ class Fullwidth_Page_Templates {
 		$this->includes();
 
 		$this->templates = array(
-			'template-page-builder-no-sidebar.php' => esc_html__( 'FW No Sidebar', 'fullwidth-page-template' ),
-			'template-page-builder.php' => esc_html__( 'FW Fullwidth', 'fullwidth-page-template' ),
-			'template-page-builder-no-header-footer.php' => esc_html__( 'FW Fullwidth No Header Footer', 'fullwidth-page-template' ),
+			'template-page-builder-no-sidebar.php' => esc_html__( 'FW No Sidebar', 'fullwidth-templates' ),
+			'template-page-builder.php' => esc_html__( 'FW Fullwidth', 'fullwidth-templates' ),
+			'template-page-builder-no-header-footer.php' => esc_html__( 'FW Fullwidth No Header Footer', 'fullwidth-templates' ),
 		);
 
 		// Add a filter to the attributes metabox to inject template into the cache.
