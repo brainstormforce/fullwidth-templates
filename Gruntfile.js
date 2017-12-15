@@ -9,7 +9,7 @@ module.exports = function( grunt ) {
 
 		addtextdomain: {
 			options: {
-				textdomain: 'bb-header-footer',
+				textdomain: 'fullwidth-templates',
 			},
 			target: {
 				files: {
@@ -30,8 +30,8 @@ module.exports = function( grunt ) {
 			target: {
 				options: {
 					domainPath: '/languages',
-					mainFile: 'bb-header-footer.php',
-					potFilename: 'bb-header-footer.pot',
+					mainFile: 'fullwidth-page-template.php',
+					potFilename: 'fullwidth-templates.pot',
 					potHeaders: {
 						poedit: true,
 						'x-poedit-keywordslist': true
