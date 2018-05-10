@@ -5,7 +5,7 @@
  * Description:     Create Full width landing pages with any theme.
  * Author:          Brainstorm Force
  * Author URI:      https://www.brainstormforce.com
- * Text Domain:     fullwidth-page-template
+ * Text Domain:     fullwidth-templates
  * Domain Path:     /languages
  * Version:         1.0.2
  *
@@ -30,7 +30,7 @@ define( 'FPT_PATH', plugin_basename( __FILE__ ) );
 function init_fullwidth_template() {
 
 	// Load localization file
-	load_plugin_textdomain( 'fullwidth-page-template' );
+	load_plugin_textdomain( 'fullwidth-templates' );
 
 	// Init dynamic header footer
 	new Fullwidth_Page_Templates();
