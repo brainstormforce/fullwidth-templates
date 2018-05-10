@@ -1,9 +1,9 @@
 # Fullwidth Templates for Any Theme & Page Builder #
-**Contributors:** brainstormforce, nikschavan, WPCrafter, ramiy  
+**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce), [nikschavan](https://profiles.wordpress.org/nikschavan), [WPCrafter](https://profiles.wordpress.org/WPCrafter), [ramiy](https://profiles.wordpress.org/ramiy)  
 **Tags:** full width, fullwidth, template, beaver builder, elementor, genesis, primer, full width template, remove sidebar, page builder  
 **Donate link:** https://www.brainstormforce.com/payment/  
 **Requires at least:** 4.2  
-**Tested up to:** 4.9.1  
+**Tested up to:** 4.9.5  
 **Stable tag:** 1.0.3  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
@@ -78,21 +78,11 @@ Project by [Brainstorm Force][3].
 Check Screenshots for more details.
 
 ## Screenshots ##
-### 1. Extra Template Selection Options for Pages & Posts ###
-![Extra Template Selection Options for Pages & Posts](http://ps.w.org/fullwidth-templates-for-any-theme-&-page-builder/assets/screenshot-1.png)
-
-### 2. Default View on Primer Parent Theme ###
-![Default View on Primer Parent Theme](http://ps.w.org/fullwidth-templates-for-any-theme-&-page-builder/assets/screenshot-2.png)
-
-### 3. No Sidebar Template ###
-![No Sidebar Template](http://ps.w.org/fullwidth-templates-for-any-theme-&-page-builder/assets/screenshot-3.png)
-
-### 4. Fullwidth Template ###
-![Fullwidth Template](http://ps.w.org/fullwidth-templates-for-any-theme-&-page-builder/assets/screenshot-4.png)
-
-### 5. Blank - No Header / Footer Template ###
-![Blank - No Header / Footer Template](http://ps.w.org/fullwidth-templates-for-any-theme-&-page-builder/assets/screenshot-5.png)
-
+1. Extra Template Selection Options for Pages & Posts
+2. Default View on Primer Parent Theme
+3. No Sidebar Template
+4. Fullwidth Template
+5. Blank - No Header / Footer Template
 
 ## Changelog ##
 
