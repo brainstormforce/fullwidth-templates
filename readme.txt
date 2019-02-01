@@ -1,7 +1,7 @@
 === Fullwidth Templates for Any Theme & Page Builder ===
-Contributors: brainstormforce, nikschavan, WPCrafter, ramiy
+Contributors: brainstormforce, WPCrafter, ramiy
 Tags: full width, fullwidth, template, beaver builder, elementor, genesis, primer, full width template, remove sidebar, page builder
-Donate link: https://www.brainstormforce.com/payment/
+Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 4.2
 Tested up to: 4.9.5
 Stable tag: 1.0.3
