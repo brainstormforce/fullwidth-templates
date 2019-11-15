@@ -1,8 +1,19 @@
 <?php
+/**
+ * Template Helpers.
+ * Get header and Footer content.
+ *
+ * @package Fullwidth_Page_Templates
+ */
 
+/**
+ * No Content Get Header.
+ *
+ * @since 1.0.0
+ */
 function no_content_get_header() {
 
-?>
+	?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
@@ -13,20 +24,30 @@ function no_content_get_header() {
 </head>
 
 <body <?php body_class(); ?>>
-<?php 
-do_action( 'page_builder_content_body_before' );
+	<?php
+	do_action( 'page_builder_content_body_before' );
 
 }
 
+/**
+ * No Content Get Footer.
+ *
+ * @since 1.0.0
+ */
 function no_content_get_footer() {
 	do_action( 'page_builder_content_body_after' );
-	wp_footer(); 
-?>
+	wp_footer();
+	?>
 </body>
 </html>
-<?php
+	<?php
 }
 
+/**
+ * Page builder page elements.
+ *
+ * @since 1.0.0
+ */
 function page_builder_page_elements() {
 	the_content();
 }
