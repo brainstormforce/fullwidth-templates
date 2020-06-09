@@ -86,7 +86,7 @@ Check Screenshots for more details.
 
 ## Changelog ##
 ### 1.0.4 ###
-- New: New: Users can now share non-personal usage data to help us test and develop better products. ( <a href="https://store.brainstormforce.com/usage-tracking/?utm_source=changelog&utm_medium=readme&utm_campaign=usage_tracking" target="_blank" rel="noopener">Know More</a> )
+- New: Users can now share non-personal usage data to help us test and develop better products. ( <a href="https://store.brainstormforce.com/usage-tracking/?utm_source=changelog&utm_medium=readme&utm_campaign=usage_tracking" target="_blank" rel="noopener">Know More</a> )
 
 ### 1.0.3 ###
 - Make the plugin translation compatible.
