@@ -95,6 +95,7 @@ class Fullwidth_Page_Templates {
 
 	private function includes() {
 		require_once FPT_DIR . '/templates/default/template-helpers.php';
+		require_once FPT_DIR . '/admin/notices/class-astra-notices.php';
 		require_once FPT_DIR . '/admin/bsf-analytics/class-bsf-analytics.php';
 	}
 
