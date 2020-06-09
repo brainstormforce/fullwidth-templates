@@ -180,10 +180,10 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 			}
 
 			/* translators: %s product name */
-			$notice_string = __( 'Want to help make <strong>%1s</strong> even more awesome? Allow us to collect non-sensitive diagnostic data and usage information. ', 'uael' );
+			$notice_string = __( 'Want to help make <strong>%1s</strong> even more awesome? Allow us to collect non-sensitive diagnostic data and usage information. ', 'fullwidth-templates' );
 
 			if ( is_multisite() ) {
-				$notice_string .= __( 'This will be applicable for all sites from the network.', 'uael' );
+				$notice_string .= __( 'This will be applicable for all sites from the network.', 'fullwidth-templates' );
 			}
 
 			Astra_Notices::add_notice(
@@ -205,14 +205,14 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 								</div>
 							</div>',
 						/* translators: %s usage doc link */
-						sprintf( $notice_string . '<a href="%2s" target="_blank" rel="noreferrer noopener">%3s</a>', $this->get_product_name(), esc_url( $this->usage_doc_link ), __( ' Know More.', 'uael' ) ),
+						sprintf( $notice_string . '<a href="%2s" target="_blank" rel="noreferrer noopener">%3s</a>', $this->get_product_name(), esc_url( $this->usage_doc_link ), __( ' Know More.', 'fullwidth-templates' ) ),
 						add_query_arg(
 							array(
 								'bsf_analytics_optin' => 'yes',
 								'bsf_analytics_nonce' => wp_create_nonce( 'bsf_analytics_optin' ),
 							)
 						),
-						__( 'Yes! Allow it', 'uael' ),
+						__( 'Yes! Allow it', 'fullwidth-templates' ),
 						add_query_arg(
 							array(
 								'bsf_analytics_optin' => 'no',
@@ -220,7 +220,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 							)
 						),
 						MONTH_IN_SECONDS,
-						__( 'No Thanks', 'uael' )
+						__( 'No Thanks', 'fullwidth-templates' )
 					),
 					'show_if'                    => true,
 					'repeat-notice-after'        => false,
@@ -289,7 +289,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		public function every_two_days_schedule( $schedules ) {
 			$schedules['every_two_days'] = array(
 				'interval' => 2 * DAY_IN_SECONDS,
-				'display'  => __( 'Every two days', 'uael' ),
+				'display'  => __( 'Every two days', 'fullwidth-templates' ),
 			);
 
 			return $schedules;
@@ -343,7 +343,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 
 			add_settings_field(
 				'bsf-analytics-optin',       // Field ID.
-				__( 'Usage Tracking', 'uael' ),       // Field title.
+				__( 'Usage Tracking', 'fullwidth-templates' ),       // Field title.
 				array( $this, 'render_settings_field_html' ), // Field callback function.
 				'general'                    // Settings page slug.
 			);
@@ -374,15 +374,15 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 			<label for="bsf-analytics-optin">
 				<input id="bsf-analytics-optin" type="checkbox" value="1" name="bsf_analytics_optin" <?php checked( get_site_option( 'bsf_analytics_optin', 'no' ), 'yes' ); ?>>
 				<?php
-				esc_html_e( 'Allow Brainstorm Force products to track non-sensitive usage tracking data.', 'uael' );
+				esc_html_e( 'Allow Brainstorm Force products to track non-sensitive usage tracking data.', 'fullwidth-templates' );
 
 				if ( is_multisite() ) {
-					esc_html_e( ' This will be applicable for all sites from the network.', 'uael' );
+					esc_html_e( ' This will be applicable for all sites from the network.', 'fullwidth-templates' );
 				}
 				?>
 			</label>
 			<?php
-			echo wp_kses_post( sprintf( '<a href="%1s" target="_blank" rel="noreferrer noopener">%2s</a>', esc_url( $this->usage_doc_link ), __( 'Learn More.', 'uael' ) ) );
+			echo wp_kses_post( sprintf( '<a href="%1s" target="_blank" rel="noreferrer noopener">%2s</a>', esc_url( $this->usage_doc_link ), __( 'Learn More.', 'fullwidth-templates' ) ) );
 		}
 
 		/**
