@@ -186,6 +186,8 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 				$notice_string .= __( 'This will be applicable for all sites from the network.', 'fullwidth-templates' );
 			}
 
+			$language_dir = is_rtl() ? 'rtl' : 'ltr';
+
 			Astra_Notices::add_notice(
 				array(
 					'id'                         => 'bsf-optin-notice',
@@ -205,7 +207,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 								</div>
 							</div>',
 						/* translators: %s usage doc link */
-						sprintf( $notice_string . '<a href="%2s" target="_blank" rel="noreferrer noopener">%3s</a>', esc_html( $this->get_product_name() ), esc_url( $this->usage_doc_link ), __( ' Know More.', 'fullwidth-templates' ) ),
+						sprintf( $notice_string . '<span dir="%2s"><a href="%3s" target="_blank" rel="noreferrer noopener">%4s</a><span>', esc_html( $this->get_product_name() ), $language_dir, esc_url( $this->usage_doc_link ), __( ' Know More.', 'astra', 'fullwidth-templates' ) ),
 						add_query_arg(
 							array(
 								'bsf_analytics_optin' => 'yes',
@@ -371,6 +373,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 */
 		public function render_settings_field_html() {
 			?>
+			<fieldset>
 			<label for="bsf-analytics-optin">
 				<input id="bsf-analytics-optin" type="checkbox" value="1" name="bsf_analytics_optin" <?php checked( get_site_option( 'bsf_analytics_optin', 'no' ), 'yes' ); ?>>
 				<?php
@@ -383,6 +386,9 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 			</label>
 			<?php
 			echo wp_kses_post( sprintf( '<a href="%1s" target="_blank" rel="noreferrer noopener">%2s</a>', esc_url( $this->usage_doc_link ), __( 'Learn More.', 'fullwidth-templates' ) ) );
+			?>
+			</fieldset>
+			<?php
 		}
 
 		/**
@@ -405,7 +411,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 
 			$exploded_path = explode( '/', $base, 2 );
 			$plugin_slug   = $exploded_path[0];
-			
+
 			return $this->get_plugin_name( $plugin_slug );
 		}
 
@@ -415,7 +421,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		 * @param string $plugin_slug Plugin slug.
 		 * @return string $plugin_info['Name'] Plugin name.
 		 */
-		function get_plugin_name( $plugin_slug ) {
+		private function get_plugin_name( $plugin_slug ) {
 
 			$plugins = get_option( 'active_plugins' );
 
@@ -423,7 +429,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 				require_once ABSPATH . 'wp-admin/includes/plugin.php';
 			}
 
-			foreach( $plugins as $plugin_file ) {
+			foreach ( $plugins as $plugin_file ) {
 				if ( 0 === strpos( $plugin_file, $plugin_slug ) ) {
 					$plugin_path = WP_PLUGIN_DIR . '/' . $plugin_file;
 					$plugin_data = get_plugin_data( $plugin_path );
