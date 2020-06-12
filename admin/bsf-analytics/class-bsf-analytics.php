@@ -33,7 +33,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		public function __construct() {
 
 			define( 'BSF_ANALYTICS_FILE', __FILE__ );
-			define( 'BSF_ANALYTICS_VERSION', '1.0.0' );
+			define( 'BSF_ANALYTICS_VERSION', '1.0.1' );
 			define( 'BSF_ANALYTICS_PATH', dirname( __FILE__ ) );
 			define( 'BSF_ANALYTICS_URI', $this->bsf_analytics_url() );
 
@@ -180,10 +180,10 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 			}
 
 			/* translators: %s product name */
-			$notice_string = __( 'Want to help make <strong>%1s</strong> even more awesome? Allow us to collect non-sensitive diagnostic data and usage information. ', 'fullwidth-templates' );
+			$notice_string = __( 'Want to help make <strong>%1s</strong> even more awesome? Allow us to collect non-sensitive diagnostic data and usage information. ' );
 
 			if ( is_multisite() ) {
-				$notice_string .= __( 'This will be applicable for all sites from the network.', 'fullwidth-templates' );
+				$notice_string .= __( 'This will be applicable for all sites from the network.' );
 			}
 
 			Astra_Notices::add_notice(
@@ -205,14 +205,14 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 								</div>
 							</div>',
 						/* translators: %s usage doc link */
-						sprintf( $notice_string . '<a href="%2s" target="_blank" rel="noreferrer noopener">%3s</a>', $this->get_product_name(), esc_url( $this->usage_doc_link ), __( ' Know More.', 'fullwidth-templates' ) ),
+						sprintf( $notice_string . '<a href="%2s" target="_blank" rel="noreferrer noopener">%3s</a>', esc_html( $this->get_product_name() ), esc_url( $this->usage_doc_link ), __( ' Know More.' ) ),
 						add_query_arg(
 							array(
 								'bsf_analytics_optin' => 'yes',
 								'bsf_analytics_nonce' => wp_create_nonce( 'bsf_analytics_optin' ),
 							)
 						),
-						__( 'Yes! Allow it', 'fullwidth-templates' ),
+						__( 'Yes! Allow it' ),
 						add_query_arg(
 							array(
 								'bsf_analytics_optin' => 'no',
@@ -220,7 +220,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 							)
 						),
 						MONTH_IN_SECONDS,
-						__( 'No Thanks', 'fullwidth-templates' )
+						__( 'No Thanks' )
 					),
 					'show_if'                    => true,
 					'repeat-notice-after'        => false,
@@ -240,11 +240,11 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 				return;
 			}
 
-			if ( ! wp_verify_nonce( sanitize_text_field( $_GET['bsf_analytics_nonce'] ), 'bsf_analytics_optin' ) ) {
+			if ( ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['bsf_analytics_nonce'] ) ), 'bsf_analytics_optin' ) ) {
 				return;
 			}
 
-			$optin_status = sanitize_text_field( $_GET['bsf_analytics_optin'] );
+			$optin_status = isset( $_GET['bsf_analytics_optin'] ) ? sanitize_text_field( wp_unslash( $_GET['bsf_analytics_optin'] ) ) : '';
 
 			if ( 'yes' === $optin_status ) {
 				$this->optin();
@@ -289,7 +289,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 		public function every_two_days_schedule( $schedules ) {
 			$schedules['every_two_days'] = array(
 				'interval' => 2 * DAY_IN_SECONDS,
-				'display'  => __( 'Every two days', 'fullwidth-templates' ),
+				'display'  => __( 'Every two days' ),
 			);
 
 			return $schedules;
@@ -343,7 +343,7 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 
 			add_settings_field(
 				'bsf-analytics-optin',       // Field ID.
-				__( 'Usage Tracking', 'fullwidth-templates' ),       // Field title.
+				__( 'Usage Tracking' ),       // Field title.
 				array( $this, 'render_settings_field_html' ), // Field callback function.
 				'general'                    // Settings page slug.
 			);
@@ -374,15 +374,15 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 			<label for="bsf-analytics-optin">
 				<input id="bsf-analytics-optin" type="checkbox" value="1" name="bsf_analytics_optin" <?php checked( get_site_option( 'bsf_analytics_optin', 'no' ), 'yes' ); ?>>
 				<?php
-				esc_html_e( 'Allow Brainstorm Force products to track non-sensitive usage tracking data.', 'fullwidth-templates' );
+				esc_html_e( 'Allow Brainstorm Force products to track non-sensitive usage tracking data.' );
 
 				if ( is_multisite() ) {
-					esc_html_e( ' This will be applicable for all sites from the network.', 'fullwidth-templates' );
+					esc_html_e( ' This will be applicable for all sites from the network.' );
 				}
 				?>
 			</label>
 			<?php
-			echo wp_kses_post( sprintf( '<a href="%1s" target="_blank" rel="noreferrer noopener">%2s</a>', esc_url( $this->usage_doc_link ), __( 'Learn More.', 'fullwidth-templates' ) ) );
+			echo wp_kses_post( sprintf( '<a href="%1s" target="_blank" rel="noreferrer noopener">%2s</a>', esc_url( $this->usage_doc_link ), __( 'Learn More.' ) ) );
 		}
 
 		/**
@@ -405,15 +405,31 @@ if ( ! class_exists( 'BSF_Analytics' ) ) {
 
 			$exploded_path = explode( '/', $base, 2 );
 			$plugin_slug   = $exploded_path[0];
+			
+			return $this->get_plugin_name( $plugin_slug );
+		}
+
+		/**
+		 * Get plugin name by plugin slug.
+		 *
+		 * @param string $plugin_slug Plugin slug.
+		 * @return string $plugin_info['Name'] Plugin name.
+		 */
+		function get_plugin_name( $plugin_slug ) {
+
+			$plugins = get_option( 'active_plugins' );
 
 			if ( ! function_exists( 'get_plugin_data' ) ) {
 				require_once ABSPATH . 'wp-admin/includes/plugin.php';
 			}
 
-			$plugin_main_file = WP_PLUGIN_DIR . '/' . $plugin_slug . '/' . $plugin_slug . '.php';
-			$plugin_data      = get_plugin_data( wp_normalize_path( $plugin_main_file ) );
-
-			return $plugin_data['Name'];
+			foreach( $plugins as $plugin_file ) {
+				if ( 0 === strpos( $plugin_file, $plugin_slug ) ) {
+					$plugin_path = WP_PLUGIN_DIR . '/' . $plugin_file;
+					$plugin_data = get_plugin_data( $plugin_path );
+					return $plugin_data['Name'];
+				}
+			}
 		}
 
 		/**
