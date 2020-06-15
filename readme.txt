@@ -4,7 +4,7 @@ Tags: full width, fullwidth, template, beaver builder, elementor, genesis, prime
 Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 4.2
 Tested up to: 5.4
-Stable tag: 1.0.3
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -85,6 +85,8 @@ Check Screenshots for more details.
 5. Blank - No Header / Footer Template
 
 == Changelog ==
+= 1.1.0 =
+- New: Users can now share non-personal usage data to help us test and develop better products. ( <a href="https://store.brainstormforce.com/usage-tracking/?utm_source=changelog&utm_medium=readme&utm_campaign=usage_tracking" target="_blank" rel="noopener">Know More</a> )
 
 = 1.0.3 =
 - Make the plugin translation compatible.
