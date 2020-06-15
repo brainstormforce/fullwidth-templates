@@ -7,7 +7,7 @@
  * Author URI:      https://www.brainstormforce.com
  * Text Domain:     fullwidth-templates
  * Domain Path:     /languages
- * Version:         1.0.3
+ * Version:         1.0.4
  *
  * @package         Fullwidth_Page_Templates
  */
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once 'class-fullwidth-page-templates.php';
 
-define( 'FPT_VER', '1.0.3' );
+define( 'FPT_VER', '1.0.4' );
 define( 'FPT_DIR', plugin_dir_path( __FILE__ ) );
 define( 'FPT_URL', plugins_url( '/', __FILE__ ) );
 define( 'FPT_PATH', plugin_basename( __FILE__ ) );

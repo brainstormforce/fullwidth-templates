@@ -4,7 +4,7 @@ Tags: full width, fullwidth, template, beaver builder, elementor, genesis, prime
 Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 4.2
 Tested up to: 5.4
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
