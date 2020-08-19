@@ -4,7 +4,7 @@
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Requires at least:** 4.2  
 **Tested up to:** 5.5  
-**Stable tag:** 1.1.0  
+**Stable tag:** 1.1.1  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -85,6 +85,10 @@ Check Screenshots for more details.
 5. Blank - No Header / Footer Template
 
 ## Changelog ##
+
+### 1.1.1 ###
+- Fix: Fixed compatibility with other plugins with respect to the admin notice.
+
 ### 1.1.0 ###
 - New: Users can now share non-personal usage data to help us test and develop better products. ( <a href="https://store.brainstormforce.com/usage-tracking/?utm_source=changelog&utm_medium=readme&utm_campaign=usage_tracking" target="_blank" rel="noopener">Know More</a> )
 
