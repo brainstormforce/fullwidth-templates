@@ -98,7 +98,22 @@ class Fullwidth_Page_Templates {
 		// Astra Notices.
 		require_once FPT_DIR . '/admin/notices/class-astra-notices.php';
 		// BSF Analytics.
-		require_once FPT_DIR . '/admin/bsf-analytics/class-bsf-analytics.php';
+		if ( ! class_exists( 'BSF_Analytics_Loader' ) ) {
+			require_once FPT_DIR . 'admin/bsf-analytics/class-bsf-analytics-loader.php';
+		}
+		
+		$bsf_analytics = BSF_Analytics_Loader::get_instance();
+		
+		$bsf_analytics->set_entity(
+			array(
+				'bsf' => array(
+					'product_name'    => 'Fullwidth Templates for Any Theme & Page Builder',
+					'path'            => FPT_DIR . 'admin/bsf-analytics',
+					'author'          => 'Brainstorm Force',
+					'time_to_display' => '+24 hours',
+				),
+			)
+		);
 	}
 
 	public function post_type_template() {
