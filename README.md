@@ -3,7 +3,7 @@
 **Tags:** full width, fullwidth, template, beaver builder, elementor, genesis, primer, full width template, remove sidebar, page builder  
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Requires at least:** 4.2  
-**Tested up to:** 5.7  
+**Tested up to:** 5.8  
 **Stable tag:** 1.1.1  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
