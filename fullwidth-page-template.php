@@ -12,7 +12,7 @@
  * @package         Fullwidth_Page_Templates
  */
 
-// Exit if accessed directly
+// Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -29,10 +29,10 @@ define( 'FPT_PATH', plugin_basename( __FILE__ ) );
  */
 function init_fullwidth_template() {
 
-	// Load localization file
+	// Load localization file.
 	load_plugin_textdomain( 'fullwidth-templates' );
 
-	// Init dynamic header footer
+	// Init dynamic header footer.
 	new Fullwidth_Page_Templates();
 
 }
