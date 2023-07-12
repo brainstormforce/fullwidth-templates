@@ -21,6 +21,8 @@ This plugin adds Fullwidth Page Templates to overcome these limitations.
 
 [youtube https://www.youtube.com/watch?v=LsIrXPHC0xM]
 
+[Try it out on a free dummy site](https://bsf.io/fullwidth-templates-demo)
+
 **Blank Template**
 
 *   Removes header, footer, sidebar, comments, title and leaves you with a plain canvas
