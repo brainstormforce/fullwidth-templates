@@ -88,9 +88,6 @@ Check Screenshots for more details.
 
 == Changelog ==
 
-= 1.1.2 =
-- Improvement: Compatibility with WordPress 6.5.
-
 = 1.1.1 =
 - Fix: Fixed compatibility with other plugins with respect to the admin notice.
 
