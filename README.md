@@ -1,12 +1,12 @@
 # Fullwidth Templates for Any Theme & Page Builder #
-**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce), [WPCrafter](https://profiles.wordpress.org/WPCrafter), [ramiy](https://profiles.wordpress.org/ramiy)
-**Tags:** full width, fullwidth, template, beaver builder, elementor, genesis, primer, full width template, remove sidebar, page builder
-**Donate link:** https://www.paypal.me/BrainstormForce
-**Requires at least:** 4.2
-**Tested up to:** 6.6
-**Stable tag:** 1.1.1
-**License:** GPLv2 or later
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html
+**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce), [WPCrafter](https://profiles.wordpress.org/WPCrafter), [ramiy](https://profiles.wordpress.org/ramiy)  
+**Tags:** full width, fullwidth, template, beaver builder, elementor, genesis, primer, full width template, remove sidebar, page builder  
+**Donate link:** https://www.paypal.me/BrainstormForce  
+**Requires at least:** 4.2  
+**Tested up to:** 6.6  
+**Stable tag:** 1.1.1  
+**License:** GPLv2 or later  
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
 When using a Page Builder, things like page title, boxed layout usually limit your creativity. This plugin helps you go fullwidth on any* theme.
 
@@ -28,19 +28,19 @@ This plugin adds Fullwidth Page Templates to overcome these limitations.
 *   Removes header, footer, sidebar, comments, title and leaves you with a plain canvas
 *   Awesome for landing pages where you need complete control over your layout
 
-**Full Width Template**
+**Full Width Template**  
 
 *   Removes Sidebar, page title, comments and stretches the layout to full width
 *   Ideal if you're using a Page Builder
 
-**Bonus - No Sidebar Template**
+**Bonus - No Sidebar Template**  
 
 *   Just Removes Sidebar
 *   Perfect if your theme does not have No Sidebar option.
 *   Rest of the layout & styling will remain intact.
 
   
-**Made to work with Page Builders**
+**Made to work with Page Builders**  
 When you're using a Page Builder, things like the default page title, boxed layout, extra margin and padding usually get in your way. This plugin puts you in absolute control and removes all unnecessary elements from your layout.
 
 **Dead Simple**  
@@ -49,7 +49,7 @@ It adds three simple options for your pages & posts. Just choose the one and you
 **Potable & No Lock-in**  
 If you're anything like us, you care what happens when you switch your themes. Generally changing theme means, you will need to edit all your pages and change templates. But if you're using a plugin like this - you won't have to worry about it.
 
-**Supported & Actively Developed**
+**Supported & Actively Developed**  
 Need help with something? Have an issue to report? [Get in touch][1] with us on GitHub.
 
 **Some of the popular themes**
@@ -66,7 +66,7 @@ Please open up an issue on GitHub or send us a pull request for adding compatibi
 <p></p>
 </blockquote>
 
-Project by [Brainstorm Force][3].
+Project by [Brainstorm Force][3]. 
  [1]: https://github.com/brainstormforce/fullwidth-templates/
  [2]: https://github.com/brainstormforce/fullwidth-templates/
  [3]: https://www.brainstormforce.com/
