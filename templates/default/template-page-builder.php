@@ -1,12 +1,17 @@
-<?php 
-/* Template Name: BSF Fullwidth */ 
+<?php
+/**
+ * Template Name: BSF Fullwidth.
+ *
+ * @package Fullwidth_Page_Templates
+ */
 
 get_header();
 
 do_action( 'page_builder_before_content_wrapper' );
 
-    while ( have_posts() ) : the_post();
-	    do_action( 'page_builder_page_elements' ); // Give your elements priorities so that they hook in the right place.
+while ( have_posts() ) :
+	the_post();
+	do_action( 'page_builder_page_elements' ); // Give your elements priorities so that they hook in the right place.
 	endwhile;
 
 do_action( 'page_builder_after_content_wrapper' );

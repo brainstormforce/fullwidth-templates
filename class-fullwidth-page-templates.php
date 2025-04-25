@@ -1,25 +1,44 @@
 <?php
-// Exit if accessed directly
+/**
+ * Fullwidth Page Templates
+ *
+ * @package Fullwidth Page Templates
+ * @since 1.0.0
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-
-
 /**
+ * Fullwidth_Page_Templates
  *
+ * @since 1.0.0
  */
 class Fullwidth_Page_Templates {
 
+	/**
+	 * Instance
+	 *
+	 * @since 1.0.0
+	 *
+	 * @access private
+	 * @var object Class object.
+	 */
 	private $templates;
 
-	function __construct() {
+	/**
+	 * Constructor
+	 *
+	 * @since 1.0.0
+	 */
+	public function __construct() {
 
 		$this->includes();
 
 		$this->templates = array(
-			'template-page-builder-no-sidebar.php' => esc_html__( 'FW No Sidebar', 'fullwidth-templates' ),
-			'template-page-builder.php' => esc_html__( 'FW Fullwidth', 'fullwidth-templates' ),
+			'template-page-builder-no-sidebar.php'       => esc_html__( 'FW No Sidebar', 'fullwidth-templates' ),
+			'template-page-builder.php'                  => esc_html__( 'FW Fullwidth', 'fullwidth-templates' ),
 			'template-page-builder-no-header-footer.php' => esc_html__( 'FW Fullwidth No Header Footer', 'fullwidth-templates' ),
 		);
 
@@ -29,13 +48,13 @@ class Fullwidth_Page_Templates {
 			add_filter(
 				'page_attributes_dropdown_pages_args',
 				array( $this, 'fpt_register_project_templates' )
-				);
+			);
 		} else {
-			// Add a filter to the wp 4.7 version attributes metabox
+			// Add a filter to the wp 4.7 version attributes metabox.
 			add_action( 'init', array( $this, 'post_type_template' ), 999 );
 		}
 
-		// Add a filter to the save post to inject out template into the page cache
+		// Add a filter to the save post to inject out template into the page cache.
 		add_filter( 'wp_insert_post_data', array( $this, 'fpt_register_project_templates' ) );
 		add_filter( 'template_include', array( $this, 'fpt_view_project_template' ) );
 
@@ -44,19 +63,32 @@ class Fullwidth_Page_Templates {
 		add_filter( 'wp', array( $this, 'theme_support' ) );
 	}
 
-	public function body_class( $body_Class ) {
+	/**
+	 * Define body class.
+	 *
+	 * @param Array $body_class body class.
+	 *
+	 * @return array
+	 * @since 1.0.0
+	 */
+	public function body_class( $body_class ) {
 
 		$template = get_page_template_slug();
 
 		if ( false !== $template && $this->is_template_active() ) {
-		 	$body_Class[] = 'fpt-template';
+			$body_class[] = 'fpt-template';
 		}
 
-		$body_Class[] 	= 'fpt-template-' . get_template();
+		$body_class[] = 'fpt-template-' . get_template();
 
-		return $body_Class;
+		return $body_class;
 	}
 
+	/**
+	 * Theme Support.
+	 *
+	 * @since 1.0.0
+	 */
 	public function theme_support() {
 
 		if ( $this->is_template_active() ) {
@@ -65,10 +97,16 @@ class Fullwidth_Page_Templates {
 
 	}
 
+	/**
+	 * Check Template is active or not.
+	 *
+	 * @since 1.0.0
+	 * @return boolean
+	 */
 	public function is_template_active() {
 
 		$template = get_page_template_slug();
-		
+
 		if ( false !== $template && array_key_exists( $template, $this->templates ) ) {
 			return true;
 		}
@@ -76,23 +114,33 @@ class Fullwidth_Page_Templates {
 		return false;
 	}
 
+	/**
+	 * Enqueue script.
+	 *
+	 * @since 1.0.0
+	 */
 	public function enqueue() {
 		if ( is_page_template( 'template-page-builder.php' ) ) {
-			wp_register_style( 'fullwidth-template', plugins_url( 'assets/css/fullwidth-template.css', __FILE__ ) );
+			wp_register_style( 'fullwidth-template', plugins_url( 'assets/css/fullwidth-template.css', __FILE__ ), array(), 'FPT_VER' );
 			wp_enqueue_style( 'fullwidth-template' );
 		}
 
 		if ( is_page_template( 'template-page-builder-no-sidebar.php' ) ) {
-			wp_register_style( 'fullwidth-template-no-sidebar', plugins_url( 'assets/css/fullwidth-template-no-sidebar.css', __FILE__ ) );
+			wp_register_style( 'fullwidth-template-no-sidebar', plugins_url( 'assets/css/fullwidth-template-no-sidebar.css', __FILE__ ), array(), 'FPT_VER' );
 			wp_enqueue_style( 'fullwidth-template-no-sidebar' );
 		}
 
-		if( is_page_template( 'template-page-builder-no-header-footer.php' ) ) {
-			wp_register_style( 'fullwidth-template-no-header-footer', plugins_url( 'assets/css/fullwidth-template-no-header-footer.css', __FILE__ ) );
+		if ( is_page_template( 'template-page-builder-no-header-footer.php' ) ) {
+			wp_register_style( 'fullwidth-template-no-header-footer', plugins_url( 'assets/css/fullwidth-template-no-header-footer.css', __FILE__ ), array(), 'FPT_VER' );
 			wp_enqueue_style( 'fullwidth-template-no-header-footer' );
 		}
 	}
 
+	/**
+	 * Include file.
+	 *
+	 * @since 1.0.0
+	 */
 	private function includes() {
 		require_once FPT_DIR . '/templates/default/template-helpers.php';
 		// Astra Notices.
@@ -116,9 +164,14 @@ class Fullwidth_Page_Templates {
 		);
 	}
 
+	/**
+	 * Post Type Template.
+	 *
+	 * @since 1.0.0
+	 */
 	public function post_type_template() {
 		$args = array(
-		   'public'   => true
+			'public' => true,
 		);
 
 		$post_types = get_post_types( $args, 'names', 'and' );
@@ -131,22 +184,30 @@ class Fullwidth_Page_Templates {
 			foreach ( $post_types as $post_type ) {
 				add_filter( 'theme_' . $post_type . '_templates', array( $this, 'add_new_template' ) );
 			}
-
 		}
 	}
 
 	/**
 	 * Adds our template to the page dropdown for v4.7+
 	 *
+	 * @param array $posts_templates of Add New Template.
+	 * @since 1.0.0
+	 * @return array
 	 */
 	public function add_new_template( $posts_templates ) {
 		$posts_templates = array_merge( $posts_templates, $this->templates );
 		return $posts_templates;
 	}
 
-	function fpt_register_project_templates( $atts ) {
-
-		// Create the key used for the themes cache
+	/**
+	 * Register Project Templates.
+	 *
+	 * @param string $atts to Register Project Templates.
+	 * @since 1.0.0
+	 * @return string
+	 */
+	public function fpt_register_project_templates( $atts ) {
+		// Create the key used for the themes cache.
 		$cache_key = 'page_templates-' . md5( get_theme_root() . '/' . get_stylesheet() );
 
 		$templates = wp_get_theme()->get_page_templates();
@@ -162,7 +223,12 @@ class Fullwidth_Page_Templates {
 		return $atts;
 	}
 
-	function fpt_view_project_template( $template ) {
+	/**
+	 * Define fpt view project template.
+	 *
+	 * @param string $template for fpt view project template.
+	 */
+	public function fpt_view_project_template( $template ) {
 
 		global $post;
 
@@ -178,11 +244,11 @@ class Fullwidth_Page_Templates {
 
 		$file = FPT_DIR . '/templates/default/' . get_post_meta( $post->ID, '_wp_page_template', true );
 
-		// Just to be safe, we check if the file exist first
+		// Just to be safe, we check if the file exist first.
 		if ( file_exists( $file ) ) {
 			return $file;
 		} else {
-			echo $file;
+			echo esc_attr( $file );
 		}
 
 		return $template;
