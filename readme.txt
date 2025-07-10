@@ -4,7 +4,7 @@ Tags: full width, fullwidth, template, beaver builder, elementor, genesis, prime
 Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 4.2
 Tested up to: 6.8
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -87,6 +87,9 @@ Check Screenshots for more details.
 5. Blank - No Header / Footer Template
 
 == Changelog ==
+
+= 1.1.2 =
+- Fix: Fixed PHP notice by delaying text domain loading for Fullwidth Template plugin until the init action.
 
 = 1.1.1 =
 - Fix: Fixed compatibility with other plugins with respect to the admin notice.

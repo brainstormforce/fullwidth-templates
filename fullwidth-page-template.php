@@ -7,34 +7,33 @@
  * Author URI:      https://www.brainstormforce.com
  * Text Domain:     fullwidth-templates
  * Domain Path:     /languages
- * Version:         1.1.1
+ * Version:         1.1.2
  *
  * @package         Fullwidth_Page_Templates
  */
 
-// Exit if accessed directly
+// Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+    exit;
 }
 
 require_once 'class-fullwidth-page-templates.php';
 
-define( 'FPT_VER', '1.1.1' );
+define( 'FPT_VER', '1.1.2' );
 define( 'FPT_DIR', plugin_dir_path( __FILE__ ) );
 define( 'FPT_URL', plugins_url( '/', __FILE__ ) );
 define( 'FPT_PATH', plugin_basename( __FILE__ ) );
 
 /**
- * Load the Plugin Class.
+ * Load the Plugin Class and translations.
  */
 function init_fullwidth_template() {
+    // Load localization file.
+    load_plugin_textdomain( 'fullwidth-templates', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 
-	// Load localization file
-	load_plugin_textdomain( 'fullwidth-templates' );
-
-	// Init dynamic header footer
-	new Fullwidth_Page_Templates();
-
+    // Init dynamic header footer.
+    new Fullwidth_Page_Templates();
 }
 
-add_action( 'plugins_loaded', 'init_fullwidth_template' );
+// Load everything on init instead of plugins_loaded.
+add_action( 'init', 'init_fullwidth_template' );
