@@ -1,16 +1,42 @@
 name: Deploy to WordPress.org
+
 on:
   push:
     tags:
-    - "*"
+      - "*"
+
 jobs:
-  tag:
-    name: New tag
+  deploy:
+    name: Deploy to WordPress.org Plugin Repo
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@master
-    - name: WordPress Plugin Deploy
-      uses: 10up/action-wordpress-plugin-asset-update@stable
-      env:
-        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node (optional, only if you build assets)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # Optional: install dependencies and build if you need
+      # - name: Install & Build Assets
+      #   run: |
+      #     npm ci
+      #     npm run build
+
+      # 🧹 Step: Clean old files from SVN trunk
+      - name: Clean SVN trunk folder before copying
+        run: |
+          rm -rf /home/runner/svn-fullwidth-templates/trunk/* || true
+
+      # 🛠 Deploy plugin
+      - name: WordPress Plugin Deploy
+        uses: 10up/action-wordpress-plugin-asset-update@stable
+        with:
+          SLUG: fullwidth-templates
+          ASSETS_DIR: .wordpress-org
+          IGNORE_OTHER_FILES: true
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
