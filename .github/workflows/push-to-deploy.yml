@@ -9,10 +9,20 @@ jobs:
   deploy:
     name: Deploy to WordPress.org
     runs-on: ubuntu-latest
+    environment: production
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Verify release tag is reachable from master
+        run: |
+          git fetch --no-tags --depth=50 origin master:refs/remotes/origin/master
+          if ! git merge-base --is-ancestor "$GITHUB_SHA" refs/remotes/origin/master; then
+            echo "::error::Tag $GITHUB_REF_NAME ($GITHUB_SHA) is not reachable from master. Refusing to deploy."
+            exit 1
+          fi
 
       # Optional: Add build steps if needed (uncomment if your plugin needs it)
       # - name: Install dependencies and build assets
